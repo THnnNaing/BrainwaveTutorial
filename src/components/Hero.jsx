@@ -1,4 +1,4 @@
-import { curve } from "../assets";
+import { curve, heroBackground, robot } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
 
@@ -30,8 +30,24 @@ const Hero = () => {
             Unleash the power of AI within Brainwave. Upgrade your productivity
             with Brainwave, the open AI chat app.
           </p>
-          <Button href="/pricing" white>Get Started</Button>
+          <Button href="/pricing" white>
+            Get Started
+          </Button>
         </div>
+        <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
+          <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
+            <div className="relative bg-n-8 rounded-[1rem]">
+              <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]"></div>
+              <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
+              <img src={robot} className="w-full" width={1440} height={1800} alt="AI" />
+              </div>
+            </div>
+          </div>
+          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:[">
+            <img src={heroBackground} className="w-full" width={1440} height={1800} alt="hero" />
+          </div>
+        </div>
+
       </div>
     </Section>
   );
